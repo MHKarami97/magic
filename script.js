@@ -167,7 +167,7 @@ function load() {
         {
             url: "https://api.github.com/repos/mhkarami97/poem/contents/_posts",
             name: "poem",
-            persianTxt: "دو سه رکعت غزلِ شاد بخوانم هر روز",
+            persianTxt: "دو سه رکعت غزل شاد بخوانم هر روز",
             id: 9
         },
         {

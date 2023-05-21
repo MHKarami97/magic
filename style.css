@@ -108,6 +108,15 @@ h1 {
   margin: 2rem 0;
 }
 
+h4 {
+  font-size: 1rem;
+  font-family: Vazirmatn, Tahoma;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+  margin: 2rem 0;
+}
+
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -336,14 +345,20 @@ h1 {
 }
 
 @media screen and (max-width: 64rem) {
-  .col, .col1 {
+  .col {
     width: calc(45% - 2rem);
+  }
+  .col1 {
+    width: calc(90% - 2rem);
   }
 }
 
 @media screen and (max-width: 48rem) {
-  .col, .col1 {
+  .col {
     width: calc(50% - 2rem);
+  }
+  .col1 {
+    width: calc(90% - 2rem);
   }
 }
 
