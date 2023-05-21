@@ -73,7 +73,7 @@ function printData(data) {
   let template = `
   <div class="col" ontouchstart="this.classList.toggle('hover');">
       <div class="container">
-          <div class="front" style="background-image: url('./img/${data.name}.jpg')">
+          <div class="front" style="background-color: #3e4646;background-image: url('./img/${data.name}.jpg')">
               <div class="inner">
                   <p>${data.name.toUpperCase()}</p>
                   <span>${data.persianTxt}</span>
@@ -82,7 +82,7 @@ function printData(data) {
           <div class="back">
               <div class="inner">
                   <p><a href="${data.siteUrl}">${data.text}</a></p>
-                  <span>کلیک کن تا بری داخلش</span>
+                  <span>کلیک کن تا ببینی</span>
               </div>
           </div>
       </div>
