@@ -117,7 +117,7 @@ function load() {
     {
       url: "https://api.github.com/repos/mhkarami97/poem/contents/_posts",
       name: "poem",
-      persianTxt: "نذر کردم که اگر سهم من از عشق شدی دو سه رکعت غزلِ شاد بخوانم هر روز"
+      persianTxt: "دو سه رکعت غزلِ شاد بخوانم هر روز"
     },
     {
       url: "https://api.github.com/repos/mhkarami97/trip/contents/_posts",
@@ -132,7 +132,7 @@ function load() {
     {
       url: "https://api.github.com/repos/mhkarami97/blog/contents/_posts",
       name: "blog",
-      persianTxt: "وقت یه درس تخصصی فنی هستش"
+      persianTxt: "وقت یه درس تخصصی هستش"
     },
     {
       url: "https://api.github.com/repos/mhkarami97/link/contents/_posts",
@@ -173,9 +173,14 @@ function load() {
           switch (name) {
             case "travel":
             case "video":
-            case "music":
             case "trip":
               tmpName = file.split("-")[3].split(".")[0];
+              siteUrl = "https://" + name + ".mhkarami97.ir/" + tmpName;
+              break;
+
+            case "music":
+              tmpName = file.split(".")[0];
+              tmpName=tmpName.substring(11);
               siteUrl = "https://" + name + ".mhkarami97.ir/" + tmpName;
               break;
 

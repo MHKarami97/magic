@@ -257,6 +257,10 @@ h1 {
   color: #212121;
 }
 
+.back .inner p {
+  font-size: 1.7rem;
+}
+
 .back .inner span {
   color: #3e4646;
   font-size: small;
