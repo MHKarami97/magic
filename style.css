@@ -185,6 +185,11 @@ h1 {
   color: #212121;
 }
 
+.back .inner span {
+  color: #c5c9c9;
+  font-size: small;
+}
+
 .front .inner p:after {
   content: "";
   width: 4rem;

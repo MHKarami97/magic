@@ -82,6 +82,7 @@ function printData(data) {
           <div class="back">
               <div class="inner">
                   <p><a href="${data.siteUrl}">${data.text}</a></p>
+                  <span>کلیک کن تا بری داخلش</span>
               </div>
           </div>
       </div>
