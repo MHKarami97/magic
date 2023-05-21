@@ -131,6 +131,18 @@ h1 {
   cursor: pointer;
 }
 
+.col1 {
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.col2 {
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
 .container {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -306,20 +318,37 @@ h1 {
   line-height: 60px;
 }
 
+.wait{
+  position:fixed;
+  width:100px;
+  height:60px;
+  bottom:50%;
+  right:50%;
+  background-color:#444;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+}
+
 @media screen and (max-width: 64rem) {
-  .col {
+  .col, .col1 {
     width: calc(45% - 2rem);
   }
 }
 
 @media screen and (max-width: 48rem) {
-  .col {
+  .col, .col1 {
     width: calc(50% - 2rem);
   }
 }
 
 @media screen and (max-width: 32rem) {
-  .col {
+  .col, .col1 {
     width: 100%;
     margin: 0 0 2rem 0;
   }
