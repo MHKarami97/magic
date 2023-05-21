@@ -70,7 +70,6 @@ function removeBlankLine(str) {
 }
 
 function printData(data) {
-  console.log(`./img/${data.name}.jpg`);
   let template = `
   <div class="col" ontouchstart="this.classList.toggle('hover');">
       <div class="container">
