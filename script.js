@@ -72,7 +72,27 @@ function removeBlankLine(str) {
 function printData(data) {
     let template;
 
-    if (data.name == 'poem' || data.name == 'sentence') {
+    if (data.name == 'experience') {
+        template = `
+  <div class="col2" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+          <div class="front" style="background-color: #3e4646;background-image: url('./img/${data.name}.jpg')">
+              <div class="inner">
+                  <p>${data.name.toUpperCase()}</p>
+                  <span>${data.persianTxt}</span>
+              </div>
+          </div>
+          <div class="back">
+              <div class="inner">
+                  <p><a href="${data.siteUrl}">${data.text}</a></p>
+                  <span>کلیک کن تا بیشتر ببینی</span>
+              </div>
+          </div>
+      </div>
+  </div>
+  `;
+    }
+    else if (data.name == 'poem' || data.name == 'sentence') {
         template = `
   <div class="col1" ontouchstart="this.classList.toggle('hover');">
       <div class="container">
@@ -176,6 +196,12 @@ function load() {
             persianTxt: "بعضی وقتا یه جمله می‌تونه آدم رو عوض کنه",
             id: 10
         },
+        {
+            url: "https://api.github.com/repos/mhkarami97/experience/contents/_posts",
+            name: "experience",
+            persianTxt: "خوش بود گر محک تجربه آید به میان",
+            id: 11
+        },
     ];
 
     let textData = ["sentence", "poem"];
@@ -220,6 +246,7 @@ function load() {
                             break;
 
                         case "blog":
+                        case "experience":
                             let category = getCategory(dataAsString.split("---")[1]);
                             tmpName = file.split("-")[3].split(".")[0];
                             siteUrl =
