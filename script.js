@@ -230,7 +230,7 @@ function load() {
                         let infos = dataAsString.split("---")[1];
                         text = getTitle(infos);
                     }
-console.log(name)
+
                     switch (name) {
                         case "travel":
                         case "video":
