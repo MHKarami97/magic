@@ -72,27 +72,7 @@ function removeBlankLine(str) {
 function printData(data) {
     let template;
 
-    if (data.name == 'experience') {
-        template = `
-  <div class="col2" ontouchstart="this.classList.toggle('hover');">
-      <div class="container">
-          <div class="front" style="background-color: #3e4646;background-image: url('./img/${data.name}.jpg')">
-              <div class="inner">
-                  <p>${data.name.toUpperCase()}</p>
-                  <span>${data.persianTxt}</span>
-              </div>
-          </div>
-          <div class="back">
-              <div class="inner">
-                  <p><a href="${data.siteUrl}">${data.text}</a></p>
-                  <span>کلیک کن تا بیشتر ببینی</span>
-              </div>
-          </div>
-      </div>
-  </div>
-  `;
-    }
-    else if (data.name == 'poem' || data.name == 'sentence') {
+if (data.name == 'poem' || data.name == 'sentence' || data.name == 'experience' || data.name == 'tarfand') {
         template = `
   <div class="col1" ontouchstart="this.classList.toggle('hover');">
       <div class="container">
@@ -202,6 +182,12 @@ function load() {
             persianTxt: "خوش بود گر محک تجربه آید به میان",
             id: 11
         },
+        {
+            url: "https://api.github.com/repos/mhkarami97/tarfand/contents/_posts",
+            name: "tarfand",
+            persianTxt: "آموزش تخصصی",
+            id: 12
+        },
     ];
 
     let textData = ["sentence", "poem"];
@@ -247,6 +233,7 @@ function load() {
 
                         case "blog":
                         case "experience":
+                        case "tarfand":
                             let category = getCategory(dataAsString.split("---")[1]);
                             tmpName = file.split("-")[3].split(".")[0];
                             siteUrl =
@@ -290,7 +277,7 @@ function load() {
                         id
                     });
 
-                    if (resultData.length === 11) {
+                    if (resultData.length === 12) {
                         resultData = resultData.sort(function (a, b) {
                             if (a.id < b.id) {
                                 return -1;
