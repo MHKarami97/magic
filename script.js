@@ -196,7 +196,7 @@ function load() {
 
     urls.forEach((data) => {
         let name = data.name;
-        let persianTxt = data.persianTxt;
+        let persianTxt = data.persianTxt.replace('\'','');
         let id = data.id;
 
         fetchData(data.url)
